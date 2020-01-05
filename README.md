@@ -2,7 +2,7 @@
 ## a. Image capture and preprocessing
 The main program is imageforrobotics.m, a function file distance.m is also necessary.
 
-![report_pic_1](E:\3+2\CEG4158\robotics\report_pic_1.jpg)
+![report_pic_1](https://github.com/brunosram/robotics/blob/master/report_pic_1.jpg)
 
 *Figure 1. captured sample image*
 
