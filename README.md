@@ -1,6 +1,6 @@
 # robotics
 ## a. Image capture and preprocessing
-The main program is imageforrobotics.m, a function file distance.m is also necessary.
+The main program is imageforrobotics.m, a function file distance.m is also necessary. The recognition result is illustrated by done_recogn.jpg.
 
 ![report_pic_1](https://github.com/brunosram/robotics/blob/master/report_pic_1.jpg)
 
