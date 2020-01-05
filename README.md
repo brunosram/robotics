@@ -52,7 +52,7 @@ and return the indices of all the points as a vector of N by 2, N is the number 
 
 There are three possibilities:
 
-<img src="https://github.com/brunosram/robotics/blob/master/report_pic_5.jpg" alt="report_pic_7" width="220" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_6.jpg" alt="report_pic_6" width="220" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_6.jpg" alt="report_pic_5" style="transform:rotate(30deg);" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_5.jpg" alt="report_pic_7" width="220" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_6.jpg" alt="report_pic_6" width="220" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_6.jpg" alt="report_pic_5" width="220" style="image-orientation: 30deg; " />
 
 
 
