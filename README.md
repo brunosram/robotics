@@ -8,7 +8,7 @@ The main program is imageforrobotics.m, a function file distance.m is also neces
 
 This is an image we captured, first use ***imread\*** function to load this image. Because it’s a RGB image and has three channels, use ***rgb2gray\*** to convert it into grayscale image. This image contains useless content like the big chunk of black on the left, so just cut the image into half and take the right half. Personally, we are used to have the origin at down left, so flip the picture before processing. 
 
-Transform this image to black and white image according to the histogram, we set the threshold to 100.<img src="E:\3+2\CEG4158\robotics\report_pic_2.jpg" alt="report_pic_2" style="zoom:75%;" />
+Transform this image to black and white image according to the histogram, we set the threshold to 100.<img src="https://github.com/brunosram/robotics/blob/master/report_pic_2.jpg" alt="report_pic_2" style="zoom:75%;" />
 
 *Figure 2. the histogram of cut picture*
 
