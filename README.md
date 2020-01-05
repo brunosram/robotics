@@ -14,7 +14,7 @@ Transform this image to black and white image according to the histogram, we set
 
 So it is obvious all the pixels with value under 100 should be set to 1, and the others set to 0. But there are many tiny blocks around the objects and targets. 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_3.jpg" alt="report_pic_3" style="zoom:73%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_3.jpg" alt="report_pic_3" style="zoom:73%;" />
 
 *Figure 3. visible tiny blocks around the objects*
 
@@ -44,7 +44,7 @@ To realize this method, first we have to locate the base frame. It is pretty obv
 
 Find function will find all the points whose value(index) are the same as its parameter in the given picture 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_4.jpg" alt="report_pic_4" style="zoom:50%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_4.jpg" alt="report_pic_4" style="zoom:50%;" />
 
 *Figure 4. labeled figure with interference removed*
 
@@ -52,7 +52,7 @@ and return the indices of all the points as a vector of N by 2, N is the number 
 
 There are three possibilities:
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_7.jpg" alt="report_pic_7" style="zoom:50%;" /><img src="E:\3+2\CEG4158\robotics\report_pic_6.jpg" alt="report_pic_6" style="zoom:50%;transform:rotate(-30deg)" /><img src="E:\3+2\CEG4158\robotics\report_pic_5.jpg" alt="report_pic_5" style="zoom:50%;transform:rotate(30deg)" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_5.jpg" alt="report_pic_7" style="zoom:50%;" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_6.jpg" alt="report_pic_6" style="zoom:50%;transform:rotate(-30deg)" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_6.jpg" alt="report_pic_5" style="zoom:50%;transform:rotate(30deg)" />
 
 
 
@@ -89,7 +89,7 @@ extension):min(max(c)+extension,r_L)); %extract the block from the labeled image
 
 The result of this code is a subfigure from indexed original indexed image. 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_8.jpg" alt="report_pic_8" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_8.jpg" alt="report_pic_8" style="zoom:67%;" />
 
 *Figure 6. subfigure of objects*
 
@@ -97,7 +97,7 @@ The result of this code is a subfigure from indexed original indexed image.
 
 In order to recognize the shape, we still need the four key points mentioned above, besides, the center point is also needed. The coordinate of the center point is computed by computing the average of all the rows and columns. Also, in this circumstance, extracting the edge is still helpful. 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_9.jpg" alt="report_pic_9" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_9.jpg" alt="report_pic_9" style="zoom:67%;" />
 
 *Figure 7. the center point of an object*
 
@@ -107,7 +107,7 @@ The length of the sides are determined by computing the distance between two key
 
 About how to tell the object and the target apart, just check the number of edges in the subfigure are 1 or 2. This is done by conduct bwlabel again in the subfigure.
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_10.jpg" alt="report_pic_10" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_10.jpg" alt="report_pic_10" style="zoom:67%;" />
 
 *Figure 8. the edges of target*
 
@@ -115,7 +115,7 @@ About how to tell the object and the target apart, just check the number of edge
 
 Triangular has two possible conditions: 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_11.jpg" alt="report_pic_11" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_11.jpg" style="zoom:67%;" />
 
 *Figure 9. one of possible orientation of triangular*
 
@@ -127,7 +127,7 @@ Because the shape recognized is useless for the subsequent recognition task, we 
 
 The recognition of circle is not so assured. Here we use the property that all the points on a circle has the same distance towards the center of the circle. 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_12.jpg" alt="report_pic_12" style="zoom:67%;" /><img src="E:\3+2\CEG4158\robotics\report_pic_13.jpg" alt="report_pic_13" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_12.jpg" alt="report_pic_12" style="zoom:67%;" /><img src="https://github.com/brunosram/robotics/blob/master/report_pic_13.jpg" alt="report_pic_13" style="zoom:67%;" />
 
 *Figure 10. the middle point(yellow point on the circle and square)*
 
@@ -149,7 +149,7 @@ $$
 
 
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_14.jpg" alt="report_pic_14" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_14.jpg" style="zoom:67%;" />
 
 *Figure 11. the base reference frame*
 
@@ -157,7 +157,7 @@ $$
 
 The orientation is relatively easier than shape recognition. We don’t have to do anything to circles, orientation doesn’t work for them. The most tough part is determining the orientation of triangles and rectangles. For rectangle, the orientation is important because the gripper can only grip the object across the shorter side. The judgement is simple: if a side is longer than the other side, then compute the middle point of the shorter side, connect this point and the center point to form a line, the orientation of this line is also the orientation of this rectangular, and notice that this line is actually the x axis of this object, so our target is to overlap the x axis of gripper and the object.
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_15.jpg" alt="report_pic_15" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_15.jpg" alt="report_pic_15" style="zoom:67%;" />
 
 *Figure 12. line up the middle point and center point*
 
@@ -173,13 +173,13 @@ The code implements the equation:
 
 Because the **x** axis of base reference is pointing up, and **y** axis is pointing to right, the ![img](file:///C:/Users/abc/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png) in the Figure 12. is negative. For another orientation of rectangle, the ![img](file:///C:/Users/abc/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png) is positive, and equation is the same:
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_16.jpg" alt="report_pic_16" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_16.jpg" alt="report_pic_16" style="zoom:67%;" />
 
 *Figure 13. another orientation for rectangle*
 
 For the orientation of triangles, a corner is crucial, for the triangle is equilateral, any one of the three corners is fine for determining the orientation. Here we pick the leftmost upmost point and line up it with the center point. 
 
- <img src="E:\3+2\CEG4158\robotics\report_pic_17.jpg" alt="report_pic_17" style="zoom:67%;" />
+ <img src="https://github.com/brunosram/robotics/blob/master/report_pic_17.jpg" alt="report_pic_17" style="zoom:67%;" />
 
 *Figure 14. triangle orientation*
 
@@ -187,7 +187,7 @@ The computation of angle is the same as in rectangle, because they both have a l
 
 Finally, the orientation of square is similar to rectangle but we don’t need to figure out which side is longer. Just pick one side and calculate the middle point and the angle.
 
-<img src="E:\3+2\CEG4158\robotics\report_pic_18.jpg" alt="report_pic_18" style="zoom:67%;" />
+<img src="https://github.com/brunosram/robotics/blob/master/report_pic_18.jpg" alt="report_pic_18" style="zoom:67%;" />
 
 *Figure 15. square orientation*
 
